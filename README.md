@@ -5,4 +5,4 @@
 > discord の Snowflake から [年, 月, 日, 時, 分, 秒, ミリ秒] をリストで返します。
 
 # インストール方法
-`pip install disnowflake`
+`pip install -U disnowflake`
