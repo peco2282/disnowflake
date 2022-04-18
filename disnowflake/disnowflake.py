@@ -1,29 +1,37 @@
 from datetime import datetime
 
 
-def snow_date(id: int) -> list:
-    """Convert the snowflake ID to a date
+class DisnowFlake:
+    def __init__(self, id: int):
+        self.stamp_bin = bin(id >> 22)
+        self.stamp_dec = int(self.stamp_bin, 0)
+        self.stamp_to_unix = (self.stamp_dec + 1420070400000) / 1000
+        self.timestamp = datetime.fromtimestamp(self.stamp_to_unix)
 
-    Parameters
-    ----------
-    id : int
-        The ID of the snowflake
+    @property
+    def year(self) -> int:
+        return self.timestamp.year
 
-    Returns
-    -------
-        A list of the year, month, day, hour, minute, second, and microsecond of the snowflake.
+    @property
+    def month(self) -> int:
+        return self.timestamp.month
 
-    """
-    stamp_bin = bin(id >> 22)
-    stamp_dec = int(stamp_bin, 0)
-    stamp_to_unix = (stamp_dec + 1420070400000) / 1000
-    timestamp = datetime.fromtimestamp(t=stamp_to_unix)
-    now = list()
-    now.append(timestamp.year)
-    now.append(timestamp.month)
-    now.append(timestamp.day)
-    now.append(timestamp.hour)
-    now.append(timestamp.minute)
-    now.append(timestamp.second)
-    now.append(timestamp.microsecond)
-    return now
+    @property
+    def day(self) -> int:
+        return self.timestamp.day
+
+    @property
+    def hour(self) -> int:
+        return self.timestamp.hour
+
+    @property
+    def minute(self) -> int:
+        return self.timestamp.minute
+
+    @property
+    def second(self) -> int:
+        return self.timestamp.second
+
+    @property
+    def microsecond(self) -> int:
+        return self.timestamp.microsecond
