@@ -1,8 +1,9 @@
 # disnowflake
 [![GitHub](https://img.shields.io/github/license/peco2282/disnowflake)](https://github.com/peco2282/disnowflake/blob/main/LICENSE)
-[![Github](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/peco2282/disnowflake/blob/main/main.py)
+[![Github](https://img.shields.io/pypi/v/disnowflake)](https://github.com/peco2282/disnowflake/blob/main/main.py)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/disnowflake)
 
-> discord の Snowflake から [年, 月, 日, 時, 分, 秒, ミリ秒] をリストで返します。
+> discord の Snowflake から [年, 月, 日, 時, 分, 秒, ミリ秒] を取得できます。
 
 # インストール方法
 `pip install disnowflake`
