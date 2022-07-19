@@ -6,4 +6,4 @@
 > discord の Snowflake から [年, 月, 日, 時, 分, 秒, ミリ秒] を取得できます。
 
 # インストール方法
-`pip install disnowflake`
+`pip install -U disnowflake`
